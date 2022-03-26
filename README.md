@@ -1,7 +1,8 @@
 # 591_Object_Notify
-591租屋LINE Notify推播通知
+591租屋物件LINE Notify推播通知
 
 ### 此程式碼修改自https://github.com/dang113108/591_rent
+在此致謝原作者
 
 # 修正內容
 1. 修正無新增資訊之錯誤，如下圖：
