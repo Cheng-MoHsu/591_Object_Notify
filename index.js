@@ -56,7 +56,7 @@ function get_formated_rent_info(search_sheet, rent_result) {
 		let rent_floor = rent_item["floor_str"];
 		let tmp_array = ["", rent_hyperlink, rent_price, "", "", "", rent_section_name+" / "+rent_location, "", rent_area, rent_floor, "", "", rent_post_id];
 		format_rent_array.push(tmp_array);
-		let line_message = `${rent_post_id}\n${rent_title}\n${rent_url}\n${rent_price}\n${rent_section_name}\n${rent_location}\n${rent_area}坪，${rent_floor}`;
+		let line_message = `${rent_post_id}\n${rent_title}\n${rent_url}\n${rent_price}\n${rent_location}\n${rent_area}坪，${rent_floor}`;
 		send_to_line_notify(line_message);
 	}
 	return format_rent_array;
