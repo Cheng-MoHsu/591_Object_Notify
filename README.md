@@ -5,7 +5,7 @@
 Thanks to the original author.
 
 # Correction
-1.Fixed the error that no new information was added, as shown below:
+1. Fixed the error that no new information was added, as shown below:
 
 ![20220325_Error](https://user-images.githubusercontent.com/99020504/160132217-51705b3c-d2d7-4f83-8bdc-902aeac43fae.PNG)
 
