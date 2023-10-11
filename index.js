@@ -1,19 +1,18 @@
-const list_sheet_name = "list";//宣告list_sheet_name為list
-const line_notify_token = "LINE NOTIFY權杖";//宣告line_notify_token為LINE NOTIFY權杖
-const search_city = "城市名稱";//宣告search_city為城市名稱
-const search_query = "?";//宣告search_query為爬蟲檔案
+const list_sheet_name = "list";
+const line_notify_token = "LINE NOTIFY權杖";
+const search_city = "城市名稱";
+const search_query = "?";
 
-//函式「檢查租屋物件是否已存在」
-function check_rent_item_no_duplicated(search_sheet, post_id) { //搜尋表格、post_id
-	let list_sheet = SpreadsheetApp.getActive().getSheetByName(search_sheet);//宣告list_sheet為啟用表格搜尋，取得表格名稱
-	let type_array = list_sheet.getRange("M2:M").getValues();//宣告表格為實際表格的取得內容並且取得物件價格
-	for (let item_index = 0; item_index < type_array.length; item_index++) {//for迴圈設定表格搜索循環，設定item_index變數為0，作為for迴圈變數，如果item_index小於實際表格長度，item_index=item_index+1
-		if (type_array[item_index][0] == post_id) {//如果實際表格內容0為post_id，則
-			let price = list_sheet.getRange(`C${item_index + 2}`).getDisplayValue();//宣告價格為list_sheet的取得價格內容取得價格
-			return price.toString();//回傳價格給toString函式
+function check_rent_item_no_duplicated(search_sheet, post_id) { 
+	let list_sheet = SpreadsheetApp.getActive().getSheetByName(search_sheet);
+	let type_array = list_sheet.getRange("M2:M").getValues();
+	for (let item_index = 0; item_index < type_array.length; item_index++) {
+		if (type_array[item_index][0] == post_id) {
+			let price = list_sheet.getRange(`C${item_index + 2}`).getDisplayValue();
+			return price.toString();
 		}
 	}
-	return false;//如果租屋物件不存在於表格中則回傳Flase
+	return false;
 }
 
 function get_csrf_token() {
